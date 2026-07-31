@@ -1,0 +1,45 @@
+name: Update OpsLens formula
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 6 * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-opslens
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v6
+      - name: Download latest upstream formula
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          tag="$(gh api repos/niuguy/opslens/releases/latest --jq .tag_name)"
+          test -n "$tag"
+          mkdir -p Formula "$RUNNER_TEMP/opslens-release"
+          gh release download "$tag" \
+            --repo niuguy/opslens \
+            --pattern opslens.rb \
+            --dir "$RUNNER_TEMP/opslens-release"
+          cp "$RUNNER_TEMP/opslens-release/opslens.rb" Formula/opslens.rb
+          ruby -c Formula/opslens.rb
+          echo "tag=$tag" >> "$GITHUB_ENV"
+      - name: Publish formula update
+        run: |
+          if test -z "$(git status --short -- Formula/opslens.rb)"; then
+            echo "Formula already matches $tag"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add Formula/opslens.rb
+          git commit -m "Update opslens to ${tag#v}"
+          git push
