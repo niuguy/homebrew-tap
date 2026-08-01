@@ -1,28 +1,27 @@
 class Opslens < Formula
   desc "Local-first operational incident investigation CLI"
   homepage "https://github.com/niuguy/opslens"
-  version "0.1.1"
   license "MIT"
 
   on_macos do
     on_arm do
-      url "https://github.com/niuguy/opslens/releases/download/v0.1.1/opslens_0.1.1_darwin_arm64.tar.gz"
-      sha256 "e33747a06e4737d231cd44105e5f8908323eec8bd06f1f82e22f12722f1b4235"
+      url "https://github.com/niuguy/opslens/releases/download/v0.1.2/opslens_0.1.2_darwin_arm64.tar.gz"
+      sha256 "52d9c13ddeb1203cc8069a85e5e62b100f6d63b680782501471d2549024d5ff4"
     end
     on_intel do
-      url "https://github.com/niuguy/opslens/releases/download/v0.1.1/opslens_0.1.1_darwin_amd64.tar.gz"
-      sha256 "2969857a23f4739dd1672319c9b9bcbdfd96f3dc16078ff6f0a2a9b0251cb106"
+      url "https://github.com/niuguy/opslens/releases/download/v0.1.2/opslens_0.1.2_darwin_amd64.tar.gz"
+      sha256 "8493a6e0a90aa496e26ef38166c582d54be5afe031ba3a39df73c3b71d8e38ad"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/niuguy/opslens/releases/download/v0.1.1/opslens_0.1.1_linux_arm64.tar.gz"
-      sha256 "2f30abf37fb0fdae433636f9c4d2be6f1572c427ff8e2b8a801fa93b956acc36"
+      url "https://github.com/niuguy/opslens/releases/download/v0.1.2/opslens_0.1.2_linux_arm64.tar.gz"
+      sha256 "44c01fe7d84574b47cf4296c615009f40c33f8d9a21d2312f944e5868ec26115"
     end
     on_intel do
-      url "https://github.com/niuguy/opslens/releases/download/v0.1.1/opslens_0.1.1_linux_amd64.tar.gz"
-      sha256 "61ebe5a58d93b0fd48a53a4073b67ca3cabdc1e9096356cacd51020ad52c7cd5"
+      url "https://github.com/niuguy/opslens/releases/download/v0.1.2/opslens_0.1.2_linux_amd64.tar.gz"
+      sha256 "4f1e4855ccc79658ea51f5457e8a9f0f76f6c3d6844f33cbb93e0bcb3d8bbad0"
     end
   end
 
