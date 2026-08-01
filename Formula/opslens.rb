@@ -1,6 +1,7 @@
 class Opslens < Formula
   desc "Local-first operational incident investigation CLI"
   homepage "https://github.com/niuguy/opslens"
+  version "0.1.1"
   license "MIT"
 
   on_macos do
