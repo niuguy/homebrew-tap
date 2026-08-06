@@ -5,23 +5,23 @@ class Opslens < Formula
 
   on_macos do
     on_arm do
-      url "https://github.com/niuguy/opslens/releases/download/v0.1.4/opslens_0.1.4_darwin_arm64.tar.gz"
-      sha256 "89eadf12d38f9050c82995bdb6cd4ecda17e47b595fb831a127b3b6a8a1b1971"
+      url "https://github.com/niuguy/opslens/releases/download/v0.1.5/opslens_0.1.5_darwin_arm64.tar.gz"
+      sha256 "993e38bbafe3d91bf7507714313075a246c5f6c2b9ad4bb189b0c6d62afd532f"
     end
     on_intel do
-      url "https://github.com/niuguy/opslens/releases/download/v0.1.4/opslens_0.1.4_darwin_amd64.tar.gz"
-      sha256 "4a78b525351d24600de75d474ce9b2481b7824be2c1897aba9df8dcc458ddacd"
+      url "https://github.com/niuguy/opslens/releases/download/v0.1.5/opslens_0.1.5_darwin_amd64.tar.gz"
+      sha256 "2e1a32ce6154d01f11a03caf8dda91418819be9b8d3ac947e40f6006334871e5"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/niuguy/opslens/releases/download/v0.1.4/opslens_0.1.4_linux_arm64.tar.gz"
-      sha256 "538b35079394cc568946656a52e3053f79d13990d5c5a288c7679c81e9fe8ad0"
+      url "https://github.com/niuguy/opslens/releases/download/v0.1.5/opslens_0.1.5_linux_arm64.tar.gz"
+      sha256 "f4a8867d2213330c4c84725e4cf0ee3261d6a5dbcafa6dd86b2bec7a6120b9d2"
     end
     on_intel do
-      url "https://github.com/niuguy/opslens/releases/download/v0.1.4/opslens_0.1.4_linux_amd64.tar.gz"
-      sha256 "ecbc206d9f2891489a06db70d6db5dcce269338f36ab1c0770f429d4f4901c55"
+      url "https://github.com/niuguy/opslens/releases/download/v0.1.5/opslens_0.1.5_linux_amd64.tar.gz"
+      sha256 "5d569a76327f48dd1170f562c517fb37b272370fc6c39625670a0b7e4cd2a8f2"
     end
   end
 
